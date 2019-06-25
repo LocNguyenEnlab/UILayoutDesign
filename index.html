@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
+        <style>
+            .btn-menu{
+                width: 100%; 
+                text-align: left; 
+                background-color: #f3f4f5;
+                margin: 3px 0 0 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="col-sm-3 col-xl-3 col-xs-3">
+            <input type="text" class="form-control" placeholder="Type to search">
+            <a href="#projects" class="btn btn-default btn-menu" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
+                <span class="caret"></span> Projects
+            </a>
+            <div class="collapse" id="projects">
+                <a href="#" id="btnProjectA" onclick="$('#tabProjectA').trigger('click')" data-toggle="tab" class="btn btn-default btn-menu">
+                    <span style="margin-left: 10%">Project A</span>
+                </a>
+                <a href="#" id="btnProjetB" onclick="$('#tabProjectB').trigger('click')" class="btn btn-default btn-menu">
+                    <span style="margin-left: 10%">Project B</span>
+                </a>
+                <a href="#" id="btnProjectC" onclick="$('#tabProjectC').trigger('click')" class="btn btn-default btn-menu">
+                    <span style="margin-left: 10%">Project C</span>
+                </a>
+                <a href="#closed" class="btn btn-default btn-menu" data-toggle="collapse" aria-controls="closed" aria-expanded="false">
+                    <span style="margin-left: 10%"><span class="caret"></span> Closed</span>
+                </a>
+                <div class="collapse" id="closed">
+                    <a href="#" id="btnProjectX" onclick="$('#tabProjectX').trigger('click')" class="btn btn-default btn-menu">
+                        <span style="margin-left: 20%">Project X</span>
+                    </a>
+                    <a href="#" id="btnProjectY" onclick="$('#tabProjectY').trigger('click')" class="btn btn-default btn-menu">
+                        <span style="margin-left: 20%">Project Y</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="#" id="btnContact" onclick="$('#tabContact').trigger('click')" data-toggle="tab" class="btn btn-default btn-menu">Contacts</a>
+            <a href="#" id="btnReport" onclick="$('#tabReport').trigger('click')" class="btn btn-default btn-menu">Reports</a>
+            <a href="#" id="btnLookup" onclick="$('#tabLookup').trigger('click')" class="btn btn-default btn-menu">Lookup</a>
+            <a href="#" id="btnSetting" onclick="$('#tabSetting').trigger('click')" class="btn btn-default btn-menu">Settings</a>
+            <a href="#" id="btnSignout" onclick="$('#tabSignout').trigger('click')" class="btn btn-default btn-menu">Sign out</a>
+            
+        </div>
+        
+        <div class="col-sm-9 col-xl-9 col-xs-9">
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#myNavbar">
+                            <span class="icon-bar" style="background-color: red"></span>
+                            <span class="icon-bar" style="background-color: red"></span>
+                            <span class="icon-bar" style="background-color: red"></span>                        
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                            <li><a id="tabProjectA" data-toggle="tab" href="#projectA">Project A</a></li>
+                            <li><a id="tabProjectB" data-toggle="tab" href="#projectB">Project B</a></li>
+                            <li><a id="tabProjectC" data-toggle="tab" href="#projectC">Project C</a></li>
+                            <li><a id="tabProjectX" data-toggle="tab" href="#projectX">Project X</a></li>
+                            <li><a id="tabProjectY" data-toggle="tab" href="#projectY">Project Y</a></li>
+                            <li><a id="tabContact" data-toggle="tab" href="#contact">Contacts</a></li>
+                            <li><a id="tabReport" data-toggle="tab" href="#report">Reports</a></li>
+                            <li><a id="tabLookup" data-toggle="tab" href="#lookup">Lookup</a></li>
+                            <li><a id="tabSetting"data-toggle="tab" href="#setting">Settings</a></li>
+                            <li><a id="tabSignout" data-toggle="tab" href="#signout">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>            
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                    <h3>Home page</h3>
+                </div>
+                <div id="projectA" class="tab-pane fade">
+                    <h3>Project A</h3>
+                </div>
+                <div id="projectB" class="tab-pane fade">
+                    <h3>Project B</h3>
+                </div>
+                <div id="projectC" class="tab-pane fade">
+                    <h3>Project C</h3>
+                </div>
+                <div id="projectX" class="tab-pane fade">
+                    <h3>Project X</h3>
+                </div>
+                <div id="projectY" class="tab-pane fade">
+                    <h3>projectY</h3>
+                </div>
+                <div id="contact" class="tab-pane fade">
+                    <h3>Contacts</h3>
+                </div>
+                <div id="report" class="tab-pane fade">
+                    <h3>Reports</h3>
+                </div>
+                <div id="lookup" class="tab-pane fade">
+                    <h3>Look up</h3>
+                </div>
+                <div id="setting" class="tab-pane fade">
+                    <h3>Settings</h3>
+                </div>
+                <div id="signout" class="tab-pane fade">
+                    <h3>Sign out</h3>
+                </div>
+            </div>
+        </div>
+                        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
