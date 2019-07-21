@@ -3,55 +3,60 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">    
-        <style>
-            .btn-menu{
-                width: 100%; 
-                text-align: left; 
-                background-color: #f3f4f5;
-                margin: 3px 0 0 0;
-            }
-        </style>
+        <link rel="stylesheet" href="./main.css">
     </head>
     <body>
 
-        <div class="col-sm-4 col-xl-4 col-xs-4">
-            <input type="text" class="form-control" placeholder="Type to search">
-            <a href="#projects" class="btn btn-default btn-menu" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
-                <span class="caret"></span> Projects
-            </a>
+        <nav>
+            <input type="text" class="search-input" placeholder="Type to search">
+            <div class="btn-menu" onclick="$('#projects').trigger('click')" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
+                <a href="#projects" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
+                    <span class="caret"></span> Projects
+                </a>
+            </div>
             <div class="collapse" id="projects">
-                <a href="#" id="btnProjectA" onclick="$('#tabProjectA').trigger('click')" data-toggle="tab" class="btn btn-default btn-menu">
+                <div class="btn-menu" onclick="$('#tabProjectA').trigger('click')" data-toggle="tab">
                     <span style="margin-left: 10%">Project A</span>
-                </a>
-                <a href="#" id="btnProjetB" onclick="$('#tabProjectB').trigger('click')" class="btn btn-default btn-menu">
+                </div>
+                <div class="btn-menu" onclick="$('#tabProjectB').trigger('click')">
                     <span style="margin-left: 10%">Project B</span>
-                </a>
-                <a href="#" id="btnProjectC" onclick="$('#tabProjectC').trigger('click')" class="btn btn-default btn-menu">
+                </div>
+                <div class="btn-menu" onclick="$('#tabProjectC').trigger('click')">
                     <span style="margin-left: 10%">Project C</span>
-                </a>
-                <a href="#closed" class="btn btn-default btn-menu" data-toggle="collapse" aria-controls="closed" aria-expanded="false">
+                </div>
+                <div class="btn-menu" onclick="openCollapse('closed')" data-toggle="collapse" aria-controls="closed" aria-expanded="false">
                     <span style="margin-left: 10%"><span class="caret"></span> Closed</span>
-                </a>
+                </div>
                 <div class="collapse" id="closed">
-                    <a href="#" id="btnProjectX" onclick="$('#tabProjectX').trigger('click')" class="btn btn-default btn-menu">
+                    <div class="btn-menu" onclick="$('#tabProjectX').trigger('click')">
                         <span style="margin-left: 20%">Project X</span>
-                    </a>
-                    <a href="#" id="btnProjectY" onclick="$('#tabProjectY').trigger('click')" class="btn btn-default btn-menu">
+                    </div>
+                    <div class="btn-menu" onclick="$('#tabProjectY').trigger('click')">
                         <span style="margin-left: 20%">Project Y</span>
-                    </a>
+                    </div>
                 </div>
             </div>
             
-            <a href="#" id="btnContact" onclick="$('#tabContact').trigger('click')" data-toggle="tab" class="btn btn-default btn-menu">Contacts</a>
-            <a href="#" id="btnReport" onclick="$('#tabReport').trigger('click')" class="btn btn-default btn-menu">Reports</a>
-            <a href="#" id="btnLookup" onclick="$('#tabLookup').trigger('click')" class="btn btn-default btn-menu">Lookup</a>
-            <a href="#" id="btnSetting" onclick="$('#tabSetting').trigger('click')" class="btn btn-default btn-menu">Settings</a>
-            <a href="#" id="btnSignout" onclick="$('#tabSignout').trigger('click')" class="btn btn-default btn-menu">Sign out</a>
+            <div class="btn-menu" onclick="$('#tabContact').trigger('click')" data-toggle="tab">
+                Contacts
+            </div>
+            <div class="btn-menu" onclick="$('#tabReport').trigger('click')">
+                Reports
+            </div>
+            <div class="btn-menu" onclick="$('#tabLookup').trigger('click')">
+                Lookup
+            </div>
+            <div class="btn-menu" onclick="$('#tabSetting').trigger('click')">
+                Settings
+            </div>
+            <div class="btn-menu" onclick="$('#tabSignout').trigger('click')">
+                Sign out
+            </div>
             
-        </div>
+        </nav>
         
-        <div class="col-sm-8 col-xl-8 col-xs-8">
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd">
+        <div class="tab">
+            <div style="background-color: #e3f2fd">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#myNavbar">
@@ -76,7 +81,7 @@
                         </ul>
                     </div>
                 </div>
-            </nav>            
+            </div>            
 
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
@@ -117,5 +122,15 @@
                         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script>
+            function openCollapse(id) {
+                if (document.getElementById(id).style.display === 'none') {
+                    document.getElementById(id).style.display = 'block';
+                    document.getElementById(id).style.transitionDuration = '1s';
+                } else {
+                    document.getElementById(id).style.display = 'none';
+                }
+            }
+        </script>
     </body>
 </html>
