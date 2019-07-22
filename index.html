@@ -9,11 +9,11 @@
 
         <nav>
             <input type="text" class="search-input" placeholder="Type to search">
-            <div class="btn-menu" onclick="$('#projects').trigger('click')" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
-                <a href="#projects" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
+            <a href="#projects" data-toggle="collapse" aria-controls="projects" aria-expanded="false">
+                <div class="btn-menu">
                     <span class="caret"></span> Projects
-                </a>
-            </div>
+                </div>
+            </a>
             <div class="collapse" id="projects">
                 <div class="btn-menu" onclick="$('#tabProjectA').trigger('click')" data-toggle="tab">
                     <span style="margin-left: 10%">Project A</span>
@@ -24,9 +24,11 @@
                 <div class="btn-menu" onclick="$('#tabProjectC').trigger('click')">
                     <span style="margin-left: 10%">Project C</span>
                 </div>
-                <div class="btn-menu" onclick="openCollapse('closed')" data-toggle="collapse" aria-controls="closed" aria-expanded="false">
-                    <span style="margin-left: 10%"><span class="caret"></span> Closed</span>
-                </div>
+                <a href="#closed" data-toggle="collapse" aria-controls="closed" aria-expanded="false">
+                    <div class="btn-menu">
+                        <span style="margin-left: 10%"><span class="caret"></span> Closed</span>
+                    </div>
+                </a>
                 <div class="collapse" id="closed">
                     <div class="btn-menu" onclick="$('#tabProjectX').trigger('click')">
                         <span style="margin-left: 20%">Project X</span>
@@ -122,15 +124,5 @@
                         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-        <script>
-            function openCollapse(id) {
-                if (document.getElementById(id).style.display === 'none') {
-                    document.getElementById(id).style.display = 'block';
-                    document.getElementById(id).style.transitionDuration = '1s';
-                } else {
-                    document.getElementById(id).style.display = 'none';
-                }
-            }
-        </script>
     </body>
 </html>
